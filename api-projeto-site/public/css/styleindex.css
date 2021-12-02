@@ -136,6 +136,32 @@ section img#montanha
     background-position-y: 100%;
 }
 
+.sec3
+{
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 135px;
+    background: linear-gradient(#1c1152, #32217e);
+    background-image: url(../assets/imgs/Jinx_LOL_Render_2.png);
+    background-position: bottom;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 100%;
+}
+
+.sec4
+{
+    position: relative;
+    background: linear-gradient(#1c1152, #32217e);
+    background-image: url(../assets/imgs/PngItem_3451515.png);
+    background-position: bottom;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 100%;
+}
+
 .sec h2
 {
     display: flex;
@@ -152,7 +178,8 @@ section img#montanha
 }
 
 #bt_comp {
-    right: 50%;
+    /* margin-left: %; */
+    margin-top: 40%;
     cursor: pointer;
     height: 10vh;
     width: 15vw;
@@ -168,14 +195,15 @@ section img#montanha
 }
 
 .container{
-    padding-top: 100px;
-    padding-bottom: 100px;
+    /* padding-top: 100px;
+    padding-bottom: 100px; */
     padding-right: 50px;
     padding-left: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .bloco{
@@ -207,14 +235,16 @@ section img#montanha
 
 .container3{
     margin-top: 20%;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-right: 50px;
-    padding-left: 50px;
+    height: 60vh;
+    width: 25vw;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #div_msg{
@@ -241,4 +271,42 @@ section img#montanha
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.feed{
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input{
+height: 50px;
+border-radius: 15px;
+
+
+}
+
+h2.titulo{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+input.submit{
+    cursor: pointer;
+    background-color: #000000;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: medium;
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+b#frase1{
+    margin-top: 10%;
 }
