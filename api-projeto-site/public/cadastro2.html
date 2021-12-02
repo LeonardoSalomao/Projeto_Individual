@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Teamfight Guides</title>
+
+
+    <script src="./assets/js/funcoes.js"></script>
+
+
+    <link rel="icon" href="./assets/icon/tft.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="img-fundo-cadastro2">
+        <div class="container">
+            <div class="alinhar">
+                <div class="fundo">
+                    <a href="index.html">
+                        <img src="./assets/imgs/LogoBranca.png" alt="" class="logo-cl">
+                    </a>
+                    <div class="titulo">
+                        <span>League <br> favorito</span>
+                    </div>
+                    <div class="formulario">
+                        <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                            <input name="nome" type="text" placeholder="Nome do Jogo Desejado">
+                            <br>
+                            <button class="btn">
+                                Cadastrar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div id="div_erros_login">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function limparFormulario() {
+        document.getElementById("form_cadastro").reset();
+    }
+
+    function cadastrar() {
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_cadastro")));
+
+        var nome = formulario.get("nome");
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (nome == "") {
+            window.alert("Preencha todos os campos para prosseguir!");
+            if (nome == "") {
+                console.log('nome está em branco')
+            }
+            return false;
+        }
+
+        fetch("/jogo/jogo", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "metrica.html";
+                limparFormulario();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+</script>
