@@ -184,6 +184,18 @@ section img#montanha
     align-items: center;
 }
 
+.container3{
+    margin-top: 20%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #div_msg{
     font-size: 1.2em;
     color: rgb(0, 0, 0);

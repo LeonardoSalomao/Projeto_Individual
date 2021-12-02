@@ -25,3 +25,41 @@
             <li><a href="feedback.html" class="active">Feedbacks</a></li>
         </ul>
     </header>
+    <div class="container3">
+    <div class="feed">
+
+        <h2 style="color: black;" class="titulo">Nos dê seu feedback</h2>
+        <input class="msg" id="nome" type="text" placeholder="Nome"> <br>
+        <input class="mensagem" id="mensagem" type="text" placeholder="Digite aqui"> <br><br>
+        <div class="btn">
+            <input style="background-color: black;" type="submit" onclick="enviar()" class="submit" value="Enviar">
+        </div>
+        <b style="color: black;">Feedbacks totais: <span id="mens">0</span></b><br>
+        <b style="color: black;">Último Feedback enviado: <span id="span">...</span></b><br>
+
+    </div>
+</div>
+
+</body>
+<script>
+    var ax_nome = [];
+    var ax_mensagem = [];
+
+    function enviar() {
+        if (nome.value == "") {
+            alert("Insira seu nickname!");
+        }
+        else if (mensagem.value == "") {
+            alert("Escreva seu feedback!");
+        }
+        else{
+            ax_nome.push(nome.value);
+            ax_mensagem.push(mensagem.value);
+
+            alert(`Olá ${ax_nome[ax_nome.length - 1]}, sua mensaagem foi cadastrada com sucesso`);
+            mens.innerHTML = `${ax_mensagem.length}`;
+            span.innerHTML = `${ax_mensagem[ax_mensagem.length - 1]}`;
+        }
+    }
+</script>
+</html>
