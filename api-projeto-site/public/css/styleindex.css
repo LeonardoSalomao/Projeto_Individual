@@ -310,3 +310,20 @@ input.submit{
 b#frase1{
     margin-top: 10%;
 }
+
+.bloquin{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    /* padding-bottom: 5%; */
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    flex-direction: column;
+}
