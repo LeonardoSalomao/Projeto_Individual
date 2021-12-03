@@ -38,7 +38,7 @@
                     <input type="submit" onclick="enviar()" class="submit" value="Enviar">
                 </div>
                 <b id="frase1">Feedbacks totais: <span id="mens">0</span></b><br>
-                <b id="frase2">Último Feedback enviado: <span id="span">...</span></b><br>
+                <b id="frase2">Último Feedback enviado:<span id="span">...</span></b><br>
             </div>
         </div>
     </div>
@@ -60,9 +60,9 @@
             ax_nome.push(nome.value);
             ax_mensagem.push(mensagem.value);
 
-            alert(`Olá ${ax_nome[ax_nome.length - 1]}, sua mensaagem foi cadastrada com sucesso`);
+            alert(`Olá ${ax_nome[ax_nome.length - 1]}, sua mensagem foi cadastrada com sucesso`);
             mens.innerHTML = `${ax_mensagem.length}`;
-            span.innerHTML = `${ax_mensagem[ax_mensagem.length - 1]}`;
+            span.innerHTML = `<br>${ax_mensagem[ax_mensagem.length - 1]}`;
         }
     }
 </script>
