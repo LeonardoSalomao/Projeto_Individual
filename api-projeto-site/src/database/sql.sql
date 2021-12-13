@@ -4,26 +4,18 @@
 
 /* para sql server - remoto - produção */
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
+create table leonardo_usuario (
+	id int primary key identity(1,1),
+	nome varchar(50),
+	email varchar(50),
+	senha varchar(50)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-    descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
-); 
-
-CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
+create table leonardo_jogo (
+	idJogo  int primary key identity(100,1),
+	NomeJogo varchar(100),
+	fk_usuario int,
+	foreign key (fk_usuario) references usuario(id)
 );
 
 
